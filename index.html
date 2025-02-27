@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erhan Mor - Digital Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="split-container">
+        <div class="left-panel">
+            <div class="profile-section">
+                <h1>Erhan Mor</h1>
+                <h2>Digital Designer</h2>
+                <p class="bio">Crafting minimalist digital experiences with attention to detail and functionality.</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <a href="mailto:Erhan.Mor@my-aolcc.com" class="email">Erhan.Mor@my-aolcc.com</a>
+                <div class="social-links">
+                    <a href="#" class="social-link">Dribbble</a>
+                    <a href="#" class="social-link">Behance</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="content-section" id="about">
+                <div class="section-content">
+                    <h3>About Me</h3>
+                    <p>I'm a digital designer focused on creating clean and functional interfaces. With over 5 years of experience in digital design, I specialize in creating user-centered experiences that blend aesthetics with functionality.</p>
+                    <div class="skills-grid">
+                        <div class="skill">
+                            <span class="skill-label">UI Design</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-label">UX Design</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-label">Prototyping</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="work">
+                <div class="section-content">
+                    <h3>Selected Work</h3>
+                    <div class="work-grid">
+                        <div class="work-item">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 1">
+                            <div class="work-overlay">
+                                <h4>Mobile Banking App</h4>
+                                <p>UI/UX Design</p>
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                            <div class="work-overlay">
+                                <h4>E-commerce Platform</h4>
+                                <p>Web Design</p>
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                            <div class="work-overlay">
+                                <h4>Health & Fitness App</h4>
+                                <p>Mobile Design</p>
+                                <a href="#" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="process">
+                <div class="section-content">
+                    <h3>Design Process</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <span class="step-number">01</span>
+                            <h4>Research</h4>
+                            <p>Understanding user needs and market analysis</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">02</span>
+                            <h4>Strategy</h4>
+                            <p>Defining goals and planning approach</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">03</span>
+                            <h4>Design</h4>
+                            <p>Creating intuitive and aesthetic solutions</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">04</span>
+                            <h4>Testing</h4>
+                            <p>Validating and refining the solution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="contact">
+                <div class="section-content">
+                    <h3>Get in Touch</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

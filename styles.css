@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #ffffff;
+    --accent-color: #4CAF50;
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+.split-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Panel Styles */
+.left-panel {
+    width: 30%;
+    min-width: 300px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-section h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.profile-section h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.bio {
+    font-size: 1rem;
+    opacity: 0.8;
+    max-width: 300px;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    opacity: 0.7;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    opacity: 1;
+    color: var(--accent-color);
+    transform: translateX(10px);
+}
+
+.contact-info {
+    margin-top: auto;
+}
+
+.email {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.email:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
+/* Right Panel Styles */
+.right-panel {
+    width: 70%;
+    margin-left: 30%;
+    min-height: 100vh;
+}
+
+.content-section {
+    padding: 4rem;
+    min-height: 100vh;
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Skills Section */
+.skills-grid {
+    margin-top: 3rem;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 4px;
+    background: #eee;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--accent-color);
+    transform-origin: left;
+    animation: progressAnimation 1s ease-out forwards;
+}
+
+@keyframes progressAnimation {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Work Grid */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.work-item:hover .work-overlay {
+    opacity: 1;
+}
+
+.work-item:hover img {
+    transform: scale(1.1);
+}
+
+.work-overlay h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.work-overlay p {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.view-project {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.view-project:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.process-step {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .right-panel {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .content-section {
+        padding: 2rem;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
